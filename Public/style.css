@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('background2.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.banner {
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Original padding for the banner */
+    height: auto; /* Remove fixed height */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure banner is above other content */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 150px; /* Original size */
+    height: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1; /* Allow nav to take up remaining space */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    color: green; /* Change text color to green */
+    text-decoration: none;
+    font-size: 18px;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.container {
+    text-align: center;
+    color: white;
+    padding-top: 150px; /* Adjusted for the original banner size */
+}
+
+h1, h2 {
+    margin-top: 0;
+}
+
+.carousel {
+    position: relative;
+    width: 100%; /* Full width */
+    height: 100px; /* Set a fixed height for the carousel */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%; /* Ensure inner content fits the carousel height */
+}
+
+.carousel-inner img {
+    width: auto; /* Maintain aspect ratio */
+    height: 100%; /* Ensure images fit the carousel height */
+    flex-shrink: 0;
+    object-fit: contain; /* Maintain aspect ratio within the container */
+    margin-right: 10px; /* Add space between images */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
