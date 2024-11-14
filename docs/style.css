@@ -73,6 +73,7 @@ h1, h2 {
     height: 100px;
     margin: 0 auto;
     overflow: hidden;
+    background-color: white; /* Added background color */
 }
 
 .carousel-inner {
@@ -97,3 +98,4 @@ h1, h2 {
         transform: translateX(-100%);
     }
 }
+
