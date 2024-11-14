@@ -5,10 +5,10 @@ const path = require('path');
 const app = express();
 const PORT = 3000;
 
-app.use(express.static('public'));
+app.use(express.static('docs'));
 
 app.get('/logos', (req, res) => {
-    const logosDir = path.join(__dirname, 'public/CompanyLogos');
+    const logosDir = path.join(__dirname, 'docs/CompanyLogos');
     fs.readdir(logosDir, (err, files) => {
         if (err) {
             return res.status(500).send('Unable to scan directory');
