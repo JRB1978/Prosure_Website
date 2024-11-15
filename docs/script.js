@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .catch(error => console.error('Error fetching logos:', error));
     } else {
         // GitHub Pages: directly reference image files
-        const logos = ['bp_Logo.png', 'Costain_Logo.png', 'Exxon-Logo.png', 'Kent-PLC-Feature-Logo.png', 'Logo-TotalEnergies-2021-1.jpg', 'PDi_Logo.jpg', 'Petrofac_Logo.jpeg', 'petroflow_integrated_consultants_ltd_logo.jpeg', 'Repsol_Logo.jpeg', 'Shell.jpeg']; // List all your logo filenames here
+        const logos = ['bp_Logo.png', 'Costain_Logo.png', 'Harbour-logo.png', 'Kent-PLC-Feature-Logo.png', 'Logo-TotalEnergies-2021-1.jpg', 'PDi_Logo.jpg', 'Petrofac_Logo.jpeg', 'petroflow_integrated_consultants_ltd_logo.jpeg', 'Repsol_Logo.jpeg', 'Shell.jpeg', 'petronas-logo.png', 'PDMS-Logo-banner.png']; // List all your logo filenames here
         const carouselInner = document.getElementById('carousel-inner');
         logos.forEach(logo => {
             const img = document.createElement('img');

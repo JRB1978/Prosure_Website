@@ -55,6 +55,16 @@ nav {
     text-decoration: none;
     font-size: 18px;
     white-space: nowrap;
+    font-weight: bold; /* Make button text bold */
+    border: 2px solid #389837; /* Add green outline */
+    border-radius: 10px; /* Softer curved edges */
+    padding: 5px 10px; /* Add padding for better appearance */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+.nav-links a:hover {
+    background-color: #389837; /* Green background on hover */
+    color: white; /* White text on hover */
 }
 
 .container {
@@ -67,7 +77,7 @@ h1, h2 {
     margin-top: 0;
 }
 
-h1.main-title {
+h1.main-title, h2.main-title {
     color: #389837; /* Updated text color */
 }
 
@@ -115,7 +125,67 @@ h1.main-title {
 }
 
 .side-by-side-image {
-    width: 32%;
+    width: 32%; /* Original width for About section images */
     height: auto;
     display: block;
 }
+
+.project-side-by-side-image {
+    width: 23%; /* Adjusted width to fit four images across the page */
+    height: auto;
+    display: block;
+}
+
+.about-text {
+    color: #57585A; /* Updated text color */
+    text-align: left; /* Justify text to the left */
+    padding: 20px;
+    font-weight: bold; /* Make text bold */
+}
+
+.projects-banner {
+    background-color: white;
+    padding: 20px 0;
+}
+
+.projects-text {
+    color: #57585A; /* Grey text color */
+    text-align: left; /* Justify text to the left */
+    padding: 20px;
+    font-weight: bold; /* Make text bold */
+}
+
+.projects-text ul {
+    padding-left: 20px; /* Indent bullet points */
+}
+
+.projects-text ul li:nth-child(odd) {
+    color: #57585A; /* Grey color for odd items */
+}
+
+.projects-text ul li:nth-child(even) {
+    color: #389837; /* Green color for even items */
+}
+
+.services-text {
+    text-align: left; /* Left-align the text */
+    padding: 20px;
+    color: white; /* Ensure text is white */
+}
+
+.services-text ul {
+    padding-left: 20px; /* Indent bullet points */
+}
+
+.services-text ul li {
+    color: white; /* Ensure all bullet points are white */
+}
+
+
+
+
+
+
+
+
+
