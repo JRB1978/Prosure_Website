@@ -181,6 +181,71 @@ h1.main-title, h2.main-title {
     color: white; /* Ensure all bullet points are white */
 }
 
+.footer-banner {
+    width: 100%;
+    background-color: #57585A; /* Custom grey color */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    margin-top: 20px; /* Add some space above the footer */
+}
+
+.footer-left,
+.footer-right {
+    color: white;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-right {
+    text-align: right;
+}
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#contact-form label {
+    margin-top: 10px;
+    color: white; /* Text color */
+    font-weight: bold; /* Make text bold */
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 80%; /* Narrower input boxes */
+    max-width: 400px; /* Maximum width for the input boxes */
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#contact-form button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #389837;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact-form button:hover {
+    background-color: #2a6b28;
+}
+
+
+
+
 
 
 

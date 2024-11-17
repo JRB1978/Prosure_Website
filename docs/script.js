@@ -48,7 +48,27 @@ document.addEventListener('DOMContentLoaded', () => {
             carouselInner.appendChild(img);
         });
     }
+
+    // Form submission handling
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const company = document.getElementById('company').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        // Construct the email content
+        const subject = `New Contact Form Submission from ${name}`;
+        const body = `Name: ${name}\nCompany Name: ${company}\nEmail: ${email}\nMessage:\n${message}`;
+
+        // Send email using the mailto protocol
+        window.location.href = `mailto:Jamie.Burnett@flowsure.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
 });
+
+
+
 
 
 
