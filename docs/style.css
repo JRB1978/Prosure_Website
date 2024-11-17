@@ -183,7 +183,7 @@ h1.main-title, h2.main-title {
 
 .footer-banner {
     width: 100%;
-    background-color: #57585A; /* Custom grey color */
+    background-color: white; /* White background */
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
@@ -194,7 +194,8 @@ h1.main-title, h2.main-title {
 
 .footer-left,
 .footer-right {
-    color: white;
+    color: #389837; /* Custom green color */
+    font-weight: bold; /* Bold text */
 }
 
 .footer-left {
@@ -204,6 +205,7 @@ h1.main-title, h2.main-title {
 .footer-right {
     text-align: right;
 }
+
 #contact-form {
     display: flex;
     flex-direction: column;
