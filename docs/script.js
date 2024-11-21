@@ -67,8 +67,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Menu toggle handling
-    document.querySelector('.menu-btn').addEventListener('click', () => {
-        const navLinks = document.getElementById('nav-links');
-        navLinks.classList.toggle('show');
+    const menuBtn = document.getElementById('menu-btn');
+    const navLinks = document.getElementById('nav-links');
+
+    menuBtn.addEventListener('mouseover', () => {
+        navLinks.classList.add('show');
+    });
+
+    menuBtn.addEventListener('mouseout', () => {
+        setTimeout(() => {
+            if (!navLinks.matches(':hover')) {
+                navLinks.classList.remove('show');
+            }
+        }, 300);
+    });
+
+    navLinks.addEventListener('mouseleave', () => {
+        navLinks.classList.remove('show');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('show');
+        });
     });
 });
