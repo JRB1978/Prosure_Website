@@ -38,33 +38,39 @@ nav {
     flex-grow: 1;
 }
 
+.menu-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333; /* Adjust this color as needed */
+}
+
 .nav-links {
     list-style: none;
-    display: flex;
-    gap: 20px;
-    margin: 0;
+    display: none;
     padding: 0;
+    margin: 0;
 }
 
 .nav-links li {
-    margin: 0;
+    padding: 8px 0;
 }
 
-.nav-links a {
-    color: #389837; /* Updated text color */
+.nav-links.show {
+    display: block;
+}
+
+.nav-links li a {
     text-decoration: none;
-    font-size: 18px;
-    white-space: nowrap;
-    font-weight: bold; /* Make button text bold */
-    border: 2px solid #389837; /* Add green outline */
-    border-radius: 10px; /* Softer curved edges */
-    padding: 5px 10px; /* Add padding for better appearance */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+    color: #333; /* Adjust this color as needed */
+    display: block;
+    padding: 8px 16px;
 }
 
-.nav-links a:hover {
-    background-color: #389837; /* Green background on hover */
-    color: white; /* White text on hover */
+.nav-links li a:hover {
+    background-color: #ddd; /* Adjust this background color as needed */
+    color: #000; /* Adjust this color as needed */
 }
 
 .container {
@@ -244,15 +250,3 @@ h1.main-title, h2.main-title {
 #contact-form button:hover {
     background-color: #2a6b28;
 }
-
-
-
-
-
-
-
-
-
-
-
-
