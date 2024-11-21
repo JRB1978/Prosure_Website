@@ -69,17 +69,23 @@ document.addEventListener('DOMContentLoaded', () => {
     // Menu toggle handling
     const menuBtn = document.getElementById('menu-btn');
     const navLinks = document.getElementById('nav-links');
+    let timeoutId;
 
     menuBtn.addEventListener('mouseover', () => {
+        clearTimeout(timeoutId);
         navLinks.classList.add('show');
     });
 
     menuBtn.addEventListener('mouseout', () => {
-        setTimeout(() => {
+        timeoutId = setTimeout(() => {
             if (!navLinks.matches(':hover')) {
                 navLinks.classList.remove('show');
             }
         }, 300);
+    });
+
+    navLinks.addEventListener('mouseenter', () => {
+        clearTimeout(timeoutId);
     });
 
     navLinks.addEventListener('mouseleave', () => {
