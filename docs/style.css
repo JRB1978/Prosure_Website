@@ -90,7 +90,7 @@ nav {
 .container {
     text-align: center;
     color: white;
-    padding-top: 150px;
+    padding-top: 100px; /* Reduced from 150px to 100px */
 }
 
 h1, h2 {
@@ -136,6 +136,7 @@ h1.main-title, h2.main-title {
 .image-banner {
     background-color: white;
     padding: 20px 0;
+    margin-bottom: 20px; /* Added margin to reduce gap */
 }
 
 .image-row {
@@ -166,6 +167,7 @@ h1.main-title, h2.main-title {
 .projects-banner {
     background-color: white;
     padding: 20px 0;
+    margin-top: 20px; /* Added margin to reduce gap */
 }
 
 .projects-text {
@@ -191,6 +193,7 @@ h1.main-title, h2.main-title {
     text-align: left; /* Left-align the text */
     padding: 20px;
     color: white; /* Ensure text is white */
+    margin-bottom: 20px; /* Added margin to reduce gap */
 }
 
 .services-text ul {
@@ -231,6 +234,7 @@ h1.main-title, h2.main-title {
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
+    padding-top: 0; /* Removed padding to reduce gap */
 }
 
 #contact-form label {
