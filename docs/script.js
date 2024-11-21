@@ -91,4 +91,9 @@ document.addEventListener('DOMContentLoaded', () => {
             navLinks.classList.remove('show');
         });
     });
+
+    // Collapse the menu on window resize to avoid showing menu when switching between mobile and desktop
+    window.addEventListener('resize', () => {
+        navLinks.classList.remove('show');
+    });
 });
