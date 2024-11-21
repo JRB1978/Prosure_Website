@@ -65,26 +65,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Send email using the mailto protocol
         window.location.href = `mailto:info@prosure.io?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     });
+
+    // Menu toggle handling
+    document.querySelector('.menu-btn').addEventListener('click', () => {
+        const navLinks = document.getElementById('nav-links');
+        navLinks.classList.toggle('show');
+    });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
