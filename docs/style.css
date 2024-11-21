@@ -136,7 +136,7 @@ h1.main-title, h2.main-title {
 .image-banner {
     background-color: white;
     padding: 20px 0;
-    margin-bottom: 20px; /* Added margin to reduce gap */
+    margin-bottom: 10px; /* Reduced margin to close gap */
 }
 
 .image-row {
@@ -167,7 +167,7 @@ h1.main-title, h2.main-title {
 .projects-banner {
     background-color: white;
     padding: 20px 0;
-    margin-top: 20px; /* Added margin to reduce gap */
+    margin-top: 10px; /* Reduced margin to close gap */
 }
 
 .projects-text {
@@ -193,7 +193,7 @@ h1.main-title, h2.main-title {
     text-align: left; /* Left-align the text */
     padding: 20px;
     color: white; /* Ensure text is white */
-    margin-bottom: 20px; /* Added margin to reduce gap */
+    margin-bottom: 10px; /* Reduced margin to close gap */
 }
 
 .services-text ul {
@@ -233,7 +233,7 @@ h1.main-title, h2.main-title {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 10px; /* Reduced margin to close gap */
     padding-top: 0; /* Removed padding to reduce gap */
 }
 
