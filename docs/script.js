@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const body = `Name: ${name}\nCompany Name: ${company}\nEmail: ${email}\nMessage:\n${message}`;
 
         // Send email using the mailto protocol
-        window.location.href = `mailto:Jamie.Burnett@flowsure.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = `mailto:info@prosure.io?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     });
 });
 
