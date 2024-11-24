@@ -268,3 +268,9 @@ h1.main-title, h2.main-title {
 #contact-form button:hover {
     background-color: #2a6b28;
 }
+
+/* New CSS rule */
+.grey-text {
+    color: #57585A; /* Custom grey colour */
+    font-weight: bold; /* Optional: make the text bold */
+}
