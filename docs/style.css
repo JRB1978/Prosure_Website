@@ -273,4 +273,12 @@ h1.main-title, h2.main-title {
 .grey-text {
     color: #57585A; /* Custom grey colour */
     font-weight: bold; /* Optional: make the text bold */
+
 }
+.new-line {
+    display: block;
+    margin-left: 20px; /* Optional: indent the new line */
+    margin-top: 5px; /* Optional: add space above the new line */
+    color: white; /* Ensure the text color is white */
+}
+
