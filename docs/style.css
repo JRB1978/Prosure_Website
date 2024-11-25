@@ -197,11 +197,24 @@ h1.main-title, h2.main-title {
 }
 
 .services-text ul {
-    padding-left: 20px; /* Indent bullet points */
+    padding-left: 20px; /* Indent list items */
+    list-style-type: none; /* Remove bullets */
 }
 
 .services-text ul li {
-    color: white; /* Ensure all bullet points are white */
+    margin-bottom: 10px; /* Add some space between list items */
+}
+
+.grey-text {
+    color: #57585A; /* Custom grey color */
+    font-weight: bold; /* Optional: make the text bold */
+}
+
+.new-line {
+    display: block;
+    margin-left: 20px; /* Optional: indent the new line */
+    margin-top: 5px; /* Optional: add space above the new line */
+    color: white; /* Ensure the text color is white */
 }
 
 .footer-banner {
@@ -238,47 +251,4 @@ h1.main-title, h2.main-title {
 }
 
 #contact-form label {
-    margin-top: 10px;
-    color: white; /* Text color */
-    font-weight: bold; /* Make text bold */
-}
-
-#contact-form input,
-#contact-form textarea {
-    width: 80%; /* Narrower input boxes */
-    max-width: 400px; /* Maximum width for the input boxes */
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-#contact-form button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #389837;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#contact-form button:hover {
-    background-color: #2a6b28;
-}
-
-/* New CSS rule */
-.grey-text {
-    color: #57585A; /* Custom grey colour */
-    font-weight: bold; /* Optional: make the text bold */
-
-}
-.new-line {
-    display: block;
-    margin-left: 20px; /* Optional: indent the new line */
-    margin-top: 5px; /* Optional: add space above the new line */
-    color: white; /* Ensure the text color is white */
-}
-
+    margin-top: 10px
