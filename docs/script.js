@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .catch(error => {
                 console.error('Contact form error:', error);
-                formStatus.textContent = 'Sorry, something went wrong sending your message. Please email us directly at info@prosure.io.';
+                formStatus.textContent = 'Sorry, something went wrong sending your message. Please try again in a moment.';
                 formStatus.classList.add('error');
             })
             .finally(() => {
