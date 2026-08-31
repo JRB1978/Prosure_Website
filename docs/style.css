@@ -251,4 +251,19 @@ h1.main-title, h2.main-title {
 }
 
 #contact-form label {
-    margin-top: 10px
+    margin-top: 10px;
+}
+
+.form-status {
+    margin-top: 15px;
+    font-weight: bold;
+    min-height: 1.2em;
+}
+
+.form-status.success {
+    color: #389837;
+}
+
+.form-status.error {
+    color: #d9534f;
+}

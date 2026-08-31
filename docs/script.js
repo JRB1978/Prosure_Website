@@ -50,20 +50,41 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Form submission handling
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
+    const contactForm = document.getElementById('contact-form');
+    const formStatus = document.getElementById('form-status');
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+
+    contactForm.addEventListener('submit', function(event) {
         event.preventDefault();
 
-        const name = document.getElementById('name').value;
-        const company = document.getElementById('company').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+        formStatus.textContent = '';
+        formStatus.className = 'form-status';
 
-        // Construct the email content
-        const subject = `New Contact Form Submission from ${name}`;
-        const body = `Name: ${name}\nCompany Name: ${company}\nEmail: ${email}\nMessage:\n${message}`;
-
-        // Send email using the mailto protocol
-        window.location.href = `mailto:info@prosure.io?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        fetch(contactForm.action, {
+            method: 'POST',
+            headers: { 'Accept': 'application/json' },
+            body: new FormData(contactForm)
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (!data.success) {
+                    throw new Error(data.message || 'Submission failed');
+                }
+                formStatus.textContent = "Thank you — your message has been sent. We'll be in touch soon.";
+                formStatus.classList.add('success');
+                contactForm.reset();
+            })
+            .catch(error => {
+                console.error('Contact form error:', error);
+                formStatus.textContent = 'Sorry, something went wrong sending your message. Please email us directly at info@prosure.io.';
+                formStatus.classList.add('error');
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit';
+            });
     });
 
     // Menu toggle handling

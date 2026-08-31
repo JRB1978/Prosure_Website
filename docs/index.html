@@ -92,20 +92,25 @@
     <div id="contact" class="container">
         <h1>Contact</h1>
         <p><strong>If you would like to find out more details about Prosure or simply want a quote for a project please fill in the contact form below:</strong></p>
-        <form id="contact-form" action="send_email.php" method="post">
+        <form id="contact-form" action="https://api.web3forms.com/submit" method="post">
+            <input type="hidden" name="access_key" value="4294a0cd-7a9c-426b-9c67-d1fcb566fcfa">
+            <input type="hidden" name="subject" value="New Contact Form Submission - Prosure Website">
+            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
             <label for="name"><strong>Name:</strong></label>
             <input type="text" id="name" name="name" required>
-            
+
             <label for="company"><strong>Company Name:</strong></label>
             <input type="text" id="company" name="company" required>
-            
+
             <label for="email"><strong>Email:</strong></label>
             <input type="email" id="email" name="email" required>
-            
+
             <label for="message"><strong>Message:</strong></label>
             <textarea id="message" name="message" required></textarea>
-            
+
             <button type="submit">Submit</button>
+            <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
         </form>
     </div>
     <div class="footer-banner">
