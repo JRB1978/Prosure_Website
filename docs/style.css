@@ -510,19 +510,19 @@ h1, h2, h3 {
 .client-logos {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
 .client-logos img {
-    height: 44px;
+    height: 68px;
     width: auto;
-    max-width: 160px;
+    max-width: 220px;
     object-fit: contain;
     background: #FFFFFF;
     border: 1px solid var(--border);
     border-radius: 4px;
-    padding: 10px 16px;
+    padding: 14px 22px;
 }
 
 /* ---------- Contact ---------- */
