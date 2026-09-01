@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Tools | Prosure Consultants</title>
+    <meta name="description" content="Free engineering tools from Prosure Consultants: a unit converter for common oil &amp; gas engineering units, and a pipe schedule reference table.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Website_Pics/Prosure_Dot_Favicon.ico">
+</head>
+<body>
+    <script>
+        (function () {
+            var saved = localStorage.getItem('prosure-theme');
+            var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="logo-link" aria-label="Prosure home">
+                <img src="Website_Pics/logo-transparent.png" alt="Prosure" class="logo logo-light">
+                <img src="Website_Pics/logo-dark-bg.png" alt="Prosure" class="logo logo-dark">
+            </a>
+
+            <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav-panel" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <div class="nav-panel" id="nav-panel">
+                <ul class="nav-links">
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="tools.html">Tools</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">
+                        <svg class="icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8 A9 9 0 1 1 11.2 3 A7 7 0 0 0 21 12.8 Z"></path></svg>
+                        <svg class="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.6"></circle><line x1="12" y1="1.5" x2="12" y2="4.2"></line><line x1="12" y1="19.8" x2="12" y2="22.5"></line><line x1="4.2" y1="4.2" x2="6.1" y2="6.1"></line><line x1="17.9" y1="17.9" x2="19.8" y2="19.8"></line><line x1="1.5" y1="12" x2="4.2" y2="12"></line><line x1="19.8" y1="12" x2="22.5" y2="12"></line><line x1="4.2" y1="19.8" x2="6.1" y2="17.9"></line><line x1="17.9" y1="6.1" x2="19.8" y2="4.2"></line></svg>
+                    </button>
+                    <a href="index.html#contact" class="btn btn-primary nav-cta">Request a Quote</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="tools-intro">
+            <div class="section-inner">
+                <div class="eyebrow">Tools</div>
+                <h1>Engineering tools</h1>
+                <p class="lead">A couple of quick reference tools we use ourselves &mdash; a unit converter for common oil &amp; gas engineering units, and a pipe schedule dimension &amp; weight table.</p>
+            </div>
+        </section>
+
+        <section class="tool-section">
+            <div class="section-inner">
+                <h2>Unit Converter</h2>
+                <p class="tool-intro">Convert between common units for pressure, temperature, flow, and more.</p>
+
+                <div class="converter">
+                    <div class="converter-category">
+                        <label for="conv-category">Category</label>
+                        <select id="conv-category"></select>
+                    </div>
+
+                    <div class="converter-row">
+                        <div class="converter-field">
+                            <label for="conv-from-value">From</label>
+                            <input type="number" id="conv-from-value" value="1">
+                            <select id="conv-from-unit" aria-label="From unit"></select>
+                        </div>
+
+                        <button type="button" id="conv-swap" class="converter-swap" aria-label="Swap units">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg>
+                        </button>
+
+                        <div class="converter-field">
+                            <label for="conv-to-value">To</label>
+                            <input type="text" id="conv-to-value" readonly>
+                            <select id="conv-to-unit" aria-label="To unit"></select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tool-section tool-section-alt">
+            <div class="section-inner">
+                <h2>Pipe Schedule Reference</h2>
+                <p class="tool-intro">Outside diameter, wall thickness, internal diameter, and weight for standard nominal pipe sizes, by schedule. Internal diameter and weight are calculated from the outside diameter and wall thickness.</p>
+
+                <div class="pipe-controls">
+                    <div class="converter-field">
+                        <label for="pipe-schedule">Schedule</label>
+                        <select id="pipe-schedule"></select>
+                    </div>
+                    <div class="converter-field">
+                        <label for="pipe-units">Units</label>
+                        <select id="pipe-units">
+                            <option value="metric">Metric (mm, kg/m)</option>
+                            <option value="imperial">Imperial (in, lb/ft)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="pipe-table-wrap">
+                    <table id="pipe-table">
+                        <thead>
+                            <tr>
+                                <th>NPS</th>
+                                <th>OD (<span class="pipe-unit-label">mm</span>)</th>
+                                <th>Wall Thickness (<span class="pipe-unit-label">mm</span>)</th>
+                                <th>ID (<span class="pipe-unit-label">mm</span>)</th>
+                                <th>Weight (<span id="pipe-weight-unit">kg/m</span>)</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+
+                <p class="tool-disclaimer">For preliminary reference only. Outside diameters follow ASME B36.10M; wall thickness figures are drawn from general engineering reference knowledge rather than a live lookup against the current standard. A dash means that size/schedule combination isn't commonly tabulated. Please verify against the current edition of ASME B36.10M / B36.19M before use in detailed design.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="section-inner footer-inner">
+            <div class="footer-left">
+                <img src="Website_Pics/logo-transparent.png" alt="Prosure" class="footer-logo logo-light">
+                <img src="Website_Pics/logo-dark-bg.png" alt="Prosure" class="footer-logo logo-dark">
+                <span>Copyright Prosure Consultants Limited (SC58521)</span>
+            </div>
+            <div class="footer-right">60 Constitution Street, Leith, Edinburgh, EH6 6RR, UK</div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="tools.js"></script>
+</body>
+</html>

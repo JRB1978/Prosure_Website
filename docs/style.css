@@ -515,14 +515,14 @@ h1, h2, h3 {
 }
 
 .client-logos img {
-    height: 68px;
+    height: 136px;
     width: auto;
-    max-width: 220px;
+    max-width: 340px;
     object-fit: contain;
     background: #FFFFFF;
     border: 1px solid var(--border);
     border-radius: 4px;
-    padding: 14px 22px;
+    padding: 20px 28px;
 }
 
 /* ---------- Contact ---------- */
@@ -615,6 +615,187 @@ h1, h2, h3 {
 
 .form-status.error {
     color: var(--error);
+}
+
+/* ---------- Tools page ---------- */
+
+.tools-intro {
+    padding: 64px 0 8px 0;
+}
+
+.tools-intro h1 {
+    font-size: 40px;
+    font-weight: 600;
+    margin: 16px 0;
+}
+
+.tools-intro .lead {
+    max-width: 640px;
+}
+
+.tool-section {
+    padding: 56px 0;
+}
+
+.tool-section-alt {
+    background: var(--surface);
+}
+
+.tool-section h2 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.tool-intro {
+    margin: 0 0 32px 0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    max-width: 640px;
+}
+
+.converter {
+    max-width: 640px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.converter-category,
+.converter-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.converter label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.converter select,
+.converter input,
+.pipe-controls select {
+    width: 100%;
+    box-sizing: border-box;
+    font-family: var(--font-body);
+    font-size: 15px;
+    padding: 12px 14px;
+    border-radius: 2px;
+    border: 1px solid var(--border);
+    background: var(--field-bg);
+    color: var(--text-primary);
+    outline: none;
+}
+
+.converter select:focus,
+.converter input:focus,
+.pipe-controls select:focus {
+    border-color: var(--accent);
+}
+
+.converter-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+}
+
+.converter-row .converter-field {
+    flex: 1;
+    min-width: 0;
+}
+
+.converter-swap {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 1px;
+}
+
+.converter-swap:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.pipe-controls {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 640px;
+    margin-bottom: 28px;
+}
+
+.pipe-controls .converter-field {
+    flex: 1;
+    min-width: 180px;
+}
+
+.pipe-table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+}
+
+#pipe-table {
+    width: 100%;
+    min-width: 560px;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+#pipe-table th,
+#pipe-table td {
+    text-align: left;
+    padding: 11px 16px;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+}
+
+#pipe-table th {
+    font-family: var(--font-heading);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    background: var(--bg);
+}
+
+#pipe-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+#pipe-table td:first-child {
+    font-family: var(--font-heading);
+    font-weight: 600;
+}
+
+.pipe-na {
+    color: var(--text-secondary);
+    font-style: italic;
+    white-space: normal !important;
+}
+
+.tool-disclaimer {
+    margin: 20px 0 0 0;
+    max-width: 800px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--text-secondary);
 }
 
 /* ---------- Footer ---------- */
@@ -794,5 +975,24 @@ h1, h2, h3 {
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
+    }
+
+    .converter-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .converter-swap {
+        align-self: center;
+        margin: 0;
+        transform: rotate(90deg);
+    }
+
+    .pipe-controls {
+        flex-direction: column;
+    }
+
+    .tools-intro h1 {
+        font-size: 30px;
     }
 }
