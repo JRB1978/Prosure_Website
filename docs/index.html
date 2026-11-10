@@ -1,30 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prosure Consultants | Process Engineering &amp; Flow Assurance</title>
     <meta name="description" content="Prosure is an independent process engineering and flow assurance consultancy for the energy sector, based in Edinburgh. 50+ projects delivered since 2018 across oil &amp; gas, carbon capture, and hydrogen.">
+    <link rel="canonical" href="https://prosure.io/">
+    <meta name="theme-color" content="#FAFAF8" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#14171B" media="(prefers-color-scheme: dark)">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Prosure Consultants">
+    <meta property="og:url" content="https://prosure.io/">
+    <meta property="og:title" content="Prosure Consultants | Process Engineering &amp; Flow Assurance">
+    <meta property="og:description" content="Independent process engineering and flow assurance consultancy for the energy sector. 50+ projects delivered since 2018 across oil &amp; gas, carbon capture, and hydrogen.">
+    <meta property="og:image" content="https://prosure.io/Website_Pics/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Prosure Consultants: process engineering and flow assurance">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Prosure Consultants Limited",
+        "alternateName": "Prosure",
+        "url": "https://prosure.io/",
+        "logo": "https://prosure.io/Website_Pics/logo-transparent.png",
+        "image": "https://prosure.io/Website_Pics/og-image.png",
+        "description": "Independent process engineering and flow assurance consultancy for the energy sector: oil and gas, carbon capture and storage, and hydrogen.",
+        "foundingDate": "2018",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "60 Constitution Street, Leith",
+            "addressLocality": "Edinburgh",
+            "postalCode": "EH6 6RR",
+            "addressCountry": "GB"
+        },
+        "areaServed": "Worldwide",
+        "knowsAbout": ["Process engineering", "Flow assurance", "Production chemistry", "Process safety reviews", "Carbon capture and storage", "Hydrogen"]
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="Website_Pics/Prosure_Dot_Favicon.ico">
+    <link rel="icon" href="Website_Pics/Prosure_Dot_Favicon.ico">
+    <link rel="apple-touch-icon" href="Website_Pics/apple-touch-icon.png">
 </head>
 <body>
     <script>
         (function () {
-            var saved = localStorage.getItem('prosure-theme');
+            var saved = null;
+            try { saved = localStorage.getItem('prosure-theme'); } catch (e) {}
             var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.setAttribute('data-theme', theme);
         })();
     </script>
 
+    <a class="skip-link" href="#main">Skip to content</a>
+
     <header class="site-header">
         <div class="header-inner">
             <a href="#top" class="logo-link" aria-label="Prosure home">
-                <img src="Website_Pics/logo-transparent.png" alt="Prosure" class="logo logo-light">
-                <img src="Website_Pics/logo-dark-bg.png" alt="Prosure" class="logo logo-dark">
+                <img src="Website_Pics/logo-transparent.png" alt="Prosure" class="logo logo-light" width="640" height="136">
+                <img src="Website_Pics/logo-dark-bg.png" alt="" class="logo logo-dark" width="640" height="136">
             </a>
 
             <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav-panel" aria-label="Toggle menu">
@@ -33,7 +75,7 @@
                 <span class="bar"></span>
             </button>
 
-            <div class="nav-panel" id="nav-panel">
+            <nav class="nav-panel" id="nav-panel" aria-label="Primary">
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
@@ -42,17 +84,17 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
                 <div class="nav-actions">
-                    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">
+                    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch colour theme">
                         <svg class="icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8 A9 9 0 1 1 11.2 3 A7 7 0 0 0 21 12.8 Z"></path></svg>
                         <svg class="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.6"></circle><line x1="12" y1="1.5" x2="12" y2="4.2"></line><line x1="12" y1="19.8" x2="12" y2="22.5"></line><line x1="4.2" y1="4.2" x2="6.1" y2="6.1"></line><line x1="17.9" y1="17.9" x2="19.8" y2="19.8"></line><line x1="1.5" y1="12" x2="4.2" y2="12"></line><line x1="19.8" y1="12" x2="22.5" y2="12"></line><line x1="4.2" y1="19.8" x2="6.1" y2="17.9"></line><line x1="17.9" y1="6.1" x2="19.8" y2="4.2"></line></svg>
                     </button>
                     <a href="#contact" class="btn btn-primary nav-cta">Request a Quote</a>
                 </div>
-            </div>
+            </nav>
         </div>
     </header>
 
-    <main>
+    <main id="main">
         <section id="top" class="hero">
             <div class="hero-inner">
                 <div class="hero-copy">
@@ -112,7 +154,7 @@
                             <circle cx="0" cy="-30" r="6" class="node-accent"></circle>
                         </g>
 
-                        <text x="290" y="330" class="diagram-label">riser</text>
+                        <text x="298" y="324" class="diagram-label">riser</text>
                         <text x="300" y="605" class="diagram-label">subsea tree</text>
                     </svg>
                 </div>
@@ -186,15 +228,15 @@
 
                 <div class="about-images">
                     <figure>
-                        <img src="Website_Pics/Development-web.jpg" alt="Field development engineering" loading="lazy" width="1400" height="788">
+                        <img src="Website_Pics/Development-web.jpg" alt="Field development engineering" loading="lazy" decoding="async" width="1400" height="788">
                         <figcaption>Field development engineering</figcaption>
                     </figure>
                     <figure>
-                        <img src="Website_Pics/Pipeline-web.jpg" alt="Pipeline flow assurance" loading="lazy" width="1400" height="788">
+                        <img src="Website_Pics/Pipeline-web.jpg" alt="Pipeline flow assurance" loading="lazy" decoding="async" width="1400" height="788">
                         <figcaption>Pipeline flow assurance</figcaption>
                     </figure>
                     <figure>
-                        <img src="Website_Pics/Well-web.jpg" alt="Well and production systems" loading="lazy" width="1400" height="788">
+                        <img src="Website_Pics/Well-web.jpg" alt="Well and production systems" loading="lazy" decoding="async" width="1400" height="788">
                         <figcaption>Well &amp; production systems</figcaption>
                     </figure>
                 </div>
@@ -216,14 +258,14 @@
 
                 <div class="featured-projects">
                     <figure>
-                        <img src="Website_Pics/Subsea-web.jpg" alt="Subsea tie-back development" loading="lazy" width="1400" height="788">
+                        <img src="Website_Pics/Subsea-web.jpg" alt="Subsea tie-back development" loading="lazy" decoding="async" width="1400" height="788">
                         <figcaption>
                             <span class="project-name">Triton Area Subsea Tie-backs</span>
                             <span class="project-desc">Gannet E, Evelyn, Belinda &amp; Kyla &mdash; subsea flow assurance design</span>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="Website_Pics/Topsides-web.jpg" alt="Offshore topsides platform" loading="lazy" width="1400" height="788">
+                        <img src="Website_Pics/Topsides-web.jpg" alt="Offshore topsides platform" loading="lazy" decoding="async" width="1400" height="788">
                         <figcaption>
                             <span class="project-name">Finlaggan over Britannia Topsides Tie-in</span>
                             <span class="project-desc">Topsides tie-in engineering</span>
@@ -245,10 +287,21 @@
                 </div>
 
                 <div class="client-strip">
-                    <div class="client-strip-label">Delivered for</div>
-                    <div class="client-logos" id="client-logos">
-                        <!-- Logos loaded dynamically by script.js -->
-                    </div>
+                    <div class="client-strip-label" id="clients-label">Delivered for</div>
+                    <ul class="client-logos" aria-labelledby="clients-label">
+                        <li><img src="CompanyLogos/web/bp.png" alt="bp" width="180" height="240" loading="lazy" decoding="async"></li>
+                        <li><img src="CompanyLogos/web/shell.png" alt="Shell" width="260" height="240" loading="lazy" decoding="async"></li>
+                        <li><img src="CompanyLogos/web/totalenergies.png" alt="TotalEnergies" width="328" height="240" loading="lazy" decoding="async"></li>
+                        <li><img src="CompanyLogos/web/harbour-energy.png" alt="Harbour Energy" width="520" height="166" loading="lazy" decoding="async"></li>
+                        <li><img src="CompanyLogos/web/repsol.png" alt="Repsol" width="290" height="240" loading="lazy" decoding="async"></li>
+                        <li><img src="CompanyLogos/web/petronas.png" alt="Petronas" width="236" height="240" loading="lazy" decoding="async"></li>
+                        <li><img src="CompanyLogos/web/petrofac.png" alt="Petrofac" width="353" height="98" loading="lazy" decoding="async"></li>
+                        <li><img src="CompanyLogos/web/kent.png" alt="Kent" width="396" height="172" loading="lazy" decoding="async"></li>
+                        <li><img src="CompanyLogos/web/costain.png" alt="Costain" width="330" height="240" loading="lazy" decoding="async"></li>
+                        <li><img src="CompanyLogos/web/pdi.png" alt="PDi" width="295" height="213" loading="lazy" decoding="async"></li>
+                        <li><img src="CompanyLogos/web/pdms.png" alt="PD&amp;MS Group" width="504" height="240" loading="lazy" decoding="async"></li>
+                        <li><img src="CompanyLogos/web/petroflow.png" alt="Petroflow Integrated Consultants" width="163" height="98" loading="lazy" decoding="async"></li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -268,13 +321,13 @@
                         <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
 
                         <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
+                        <input type="text" id="name" name="name" autocomplete="name" required>
 
                         <label for="company">Company Name</label>
-                        <input type="text" id="company" name="company" required>
+                        <input type="text" id="company" name="company" autocomplete="organization" required>
 
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
 
                         <label for="message">Message</label>
                         <textarea id="message" name="message" rows="4" required></textarea>
@@ -290,8 +343,8 @@
     <footer class="site-footer">
         <div class="section-inner footer-inner">
             <div class="footer-left">
-                <img src="Website_Pics/logo-transparent.png" alt="Prosure" class="footer-logo logo-light">
-                <img src="Website_Pics/logo-dark-bg.png" alt="Prosure" class="footer-logo logo-dark">
+                <img src="Website_Pics/logo-transparent.png" alt="Prosure" class="footer-logo logo-light" width="640" height="136" loading="lazy">
+                <img src="Website_Pics/logo-dark-bg.png" alt="" class="footer-logo logo-dark" width="640" height="136" loading="lazy">
                 <span>Copyright Prosure Consultants Limited (SC58521)</span>
             </div>
             <div class="footer-right">60 Constitution Street, Leith, Edinburgh, EH6 6RR, UK</div>
