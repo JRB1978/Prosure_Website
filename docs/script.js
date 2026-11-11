@@ -1,45 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // Client logos
-    const clientLogos = document.getElementById('client-logos');
-
-    if (clientLogos) {
-        const isLocal = window.location.hostname === 'localhost';
-        const logosPath = isLocal ? '/logos' : 'CompanyLogos';
-
-        const renderLogos = (logos) => {
-            logos.forEach(logo => {
-                const img = document.createElement('img');
-                img.src = `CompanyLogos/${logo}`;
-                img.alt = logo.replace(/\.(png|jpg|jpeg)$/i, '').replace(/[_-]/g, ' ');
-                img.loading = 'lazy';
-                clientLogos.appendChild(img);
-            });
-        };
-
-        if (isLocal) {
-            fetch(logosPath)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`Network response was not ok: ${response.statusText}`);
-                    }
-                    return response.json();
-                })
-                .then(renderLogos)
-                .catch(error => console.error('Error fetching logos:', error));
-        } else {
-            const logos = ['bp_Logo.png', 'Costain_Logo.png', 'Harbour-logo.png', 'Kent-PLC-Feature-Logo.png', 'Logo-TotalEnergies-2021-1.jpg', 'PDi_Logo.jpg', 'Petrofac_Logo.jpeg', 'petroflow_integrated_consultants_ltd_logo.jpeg', 'Repsol_Logo.jpeg', 'Shell.jpeg', 'petronas-logo.png', 'PDMS-Logo-banner.png'];
-            renderLogos(logos);
-        }
-    }
-
     // Theme toggle
     const themeToggle = document.getElementById('theme-toggle');
+
+    function labelThemeToggle() {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        themeToggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+    }
+
+    labelThemeToggle();
+
     themeToggle.addEventListener('click', () => {
         const current = document.documentElement.getAttribute('data-theme');
         const next = current === 'dark' ? 'light' : 'dark';
         document.documentElement.setAttribute('data-theme', next);
-        localStorage.setItem('prosure-theme', next);
+        try {
+            localStorage.setItem('prosure-theme', next);
+        } catch (error) {
+            // Storage can be unavailable (private browsing); the toggle still works for this visit.
+        }
+        labelThemeToggle();
     });
 
     // Contact form submission
@@ -116,7 +96,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape') closeMenu();
+        if (event.key === 'Escape' && navPanel.classList.contains('open')) {
+            closeMenu();
+            menuBtn.focus();
+        }
     });
 
     window.addEventListener('resize', () => {
